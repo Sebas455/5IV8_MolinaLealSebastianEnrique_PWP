@@ -1,8 +1,6 @@
-.container-header, .container-footer{
+*{
     padding: 0;
     margin: 0;
-    color: black;
-    text-align:center;
 }
 
 .container-main{
@@ -12,25 +10,16 @@
 }
 
 .container-body{
-    display: flex;
-  justify-content: space-around; 
-  flex-wrap: wrap; 
+    margin: 100px;
 }
 
-.perfil, .experiencia{
-    border: 2px solid black;
-    margin: 3px;
-    text-align:left;
-    width: 45%;
-    padding: 20px;
+.infopersonal{
+    margin-bottom: 50px;
 }
 
-.educacion {
-    border: 2px solid black;
-    margin: 3px;
-    text-align:left;
-    width: 95%;
-    padding: 20px;
+.informacion{
+    text-align: left;
+    margin-top: 50px;
 }
 
 img {
@@ -40,7 +29,9 @@ img {
     margin: 5px;
 }
 
-.container-header{
+
+header{
+    background-color: #6E8CFB;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -53,4 +44,19 @@ img {
     height: 50px;
     width: 30rem;
     text-align: center;
+}
+
+.correo{
+    color: black;
+    text-align:center;
+    padding-top: 25px;
+}
+
+footer{
+    background-color: #6E8CFB;
+    height: 70px;
+}
+
+.perfil, .experiencia, .educacion{
+    margin-bottom: 50px;
 }
