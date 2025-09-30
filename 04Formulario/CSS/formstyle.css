@@ -8,9 +8,10 @@ body{
     margin: 50px;
 }
 
-p{
+.intro{
     font-family: 'M Plus Rounded 1C';
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 20px;
 }
 
 .GETPOST {
@@ -100,4 +101,15 @@ p{
 
 .container-form input[type="reset"]:hover {
     background-color: #347433;
+}
+
+a{
+    display: inline-block;        
+    background-color: #347433;      
+    color: white;                  
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Arial, sans-serif; 
+    font-weight: bold;
 }
