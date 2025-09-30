@@ -1,4 +1,103 @@
-*{
-    background-color: rgba(74, 196, 229, 0.901);
-    font-size: 20px;
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 20px;
+    background-image: url(../fondo.png);
+    background-size: cover;
+    margin-left: 15rem;
+    margin-right: 15rem;
 }
+  
+header {
+    background-color: #00809D;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Lobster';
+  }
+  
+  .descripcion{
+    text-align: center;
+    background-color: #FF7601;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 700;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    margin: 15px 0;
+  }
+  
+  .container-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  .enlace{
+    background-color: #F3A26D;
+    width: 150px;
+  }
+  
+  .container-table th {
+    background-color: #FF7601;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 900;
+  }
+  
+  .container-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+.button{
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+.button button{
+    border-radius: 15px;
+    width: 200px;
+    height: 35px;
+    background-color:#F3A26D;
+    color: white;
+}
+
+.button p{
+    margin-top: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button img{
+    float: right;
+}
+
+img{
+    width: 30px;
+    height: auto;
+}
+  
