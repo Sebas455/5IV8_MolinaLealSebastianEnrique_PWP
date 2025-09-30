@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #FCECDD;
+    margin: 50px;
+}
+
+.metodos {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 400;
+    color: #333;
+}
+
+.metodos li {
+    margin-bottom: 10px;
+}
+
+.container-form{
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFECB3;
+    border-radius: 30px;
+    font-family: Arial, sans-serif;
+}
+
+
+.container-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.container-form input, .container-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #347433;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.container-form input[type="text"], .container-form input[type="number"], .container-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #FFC107;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 500;
+}
+
+.container-form input[type="submit"] {
+    background-color: #99CC99;
+    color: black;
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 900;
+}
+
+.container-form input[type="submit"]:hover {
+    background-color: #347433;
+}
+
+.container-form input[type="reset"] {
+    background-color: #99CC99;
+    color: black;
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 900;
+}
+
+.container-form input[type="reset"]:hover {
+    background-color: #347433;
+}
