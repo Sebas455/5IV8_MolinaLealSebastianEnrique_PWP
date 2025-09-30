@@ -84,6 +84,15 @@ function validar (formulario) {
        return false;
     
     } 
+
+    var termcorreo = ["spam.com", "test.com"];
+    for (var i = 0; i < termcorreo.length; i++){
+        if (correo.endsWith("@" + termcorreo[i])){
+            alert("No se permite ese correo");
+            formulario.correo.focus();
+            return false;
+        }
+    }
     
 }
 
