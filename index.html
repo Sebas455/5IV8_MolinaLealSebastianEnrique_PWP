@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de manejador de versiones</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>Molina Leal Sebastian Enrique</header>
+    <header><h1 class="nombre">Molina Leal Sebastian Enrique</h1></header>
     <br>
-    <p>Este es el portafolio de evidencias para la signatura de PW y Pruebas</p>
+    <h3 class="descripcion">Este es el portafolio de evidencias para la signatura de PW y Pruebas</h3>
     <br>
     <p>Aqui vamos a crear un portafolio para cada practica</p>
     <p>Cosas para examen Part 1
@@ -20,20 +24,43 @@
         Tipografía (creati commons)
         Imágenes (creati commons)
         
-        </p>
+    </p>
 <table class="container-table">
-    <th>
-        <td>Práctica</td>
-        <td>Descripción</td>
-    </th>
+    <thead>
+        <tr>
+            <th>Práctica</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
     <tbody>
         <tr>
-            <td><a href="./01Curriculo/curriculo.html">01 Curriculo</a></td>
-            <td>Aqui va la descripcion</td>
+            <td class="enlace"><a href="https://www.figma.com/design/eJWIJNcydfdsiso0GbqWvI/Material-Design?node-id=0-1&p=f&t=KBatICiV7qOIt85p-0">Figma</a></td>
+            <td>Figma con el material design</td>
+        </tr>
+        <tr>
+            <td class="enlace"><a href="./01Curriculo/index.html">01 Curriculo</a></td>
+            <td>Hicimos un currículo con HTML y CSS</td>
+        </tr>
+        <tr>
+            <td class="enlace"><a href="./02primerospasos/estructura.html">02 Primeros pasos</a></td>
+            <td>Estructura básica del HTML</td>
+        </tr>
+        <tr>
+            <td class="enlace"><a href="./03Loggin/inicio.html">03 Log In</a></td>
+            <td>Hacer un Log In con HTML y CSS</td>
+        </tr>
+        <tr>
+            <td class="enlace"><a href="./04Formulario/formulario.html">04 Formulario</a></td>
+            <td>Hacer formulario con HTML y CSS, conectarlo con un archivo JS y probar los distintos tipos de formularios</td>
         </tr>
     </tbody>
 </table>
-
-    <a href="curriculo tarea/">Curriculo</a>
+<div class="button">
+    <button onclick="window.location.href='https://github.com/Sebas455/5IV8_MolinaLealSebastianEnrique_PWP.git'" >
+        <img src="pulgarcito.png" alt="404">
+        <p>Repositorio GitHub</p>
+    </button>
+</div>
+    
 </body>
 </html>
