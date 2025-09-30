@@ -8,6 +8,27 @@ body{
     margin: 50px;
 }
 
+p{
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 400;
+}
+
+.GETPOST {
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 100;
+    color: #333;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.GETPOST li {
+    margin-bottom: 15px;
+    background-color: #FBD6CC; 
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
 .metodos {
     list-style-type: disc;
     padding-left: 20px;
