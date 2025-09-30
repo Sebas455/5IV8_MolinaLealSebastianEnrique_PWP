@@ -10,8 +10,8 @@ VAR, LET, CONST
 
 function validar (formulario) {
     //Validar que el campo no acepte menos de 3 caracteres
-    if (formulario.nombre.value.length < 3 ) {
-        alert("Por favor escribe más de 3 caracteres en el campo nombre");
+    if (formulario.nombre.value.length < 3 || formulario.nombre.value.length > 18) {
+        alert("Por favor escribe más de 3 y menos de 18 e el campo nombre");
         formulario.nombre.focus();
         return false;
     }
