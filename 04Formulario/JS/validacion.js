@@ -82,14 +82,8 @@ function validar (formulario) {
        alert("Ingrese un correo electrónico válido");
        formulario.correo.focus();
        return false;
-    //}
     
     } 
-    
-    
-    //Validar correo electrónico que acepte formato texto@texto.texto
-    //texto.texto@texto.texto 
-    //texto.texto@texto.texto 
     
 }
 
