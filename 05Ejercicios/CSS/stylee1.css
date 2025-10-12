@@ -1,6 +1,4 @@
-/* Estilo general del body */
 body {
-    font-family: 'Arial', sans-serif;
     background-image: url(../CSS/fondo.jpg);
     background-size: cover;
     display: flex;
@@ -16,7 +14,6 @@ body {
 
 }
 
-/* Título del formulario */
 .container label {
     font-family: "Lobster";
     font-size: 25px;
@@ -26,7 +23,6 @@ body {
     color: white;
 }
 
-/* Tabla estilizada */
 .container-table {
     width: 100%;
 }
