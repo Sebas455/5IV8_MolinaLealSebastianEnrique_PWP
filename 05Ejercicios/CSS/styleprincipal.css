@@ -72,3 +72,24 @@ input[type="button"]:hover {
     color: black;
     font-weight: bold;
 }
+
+
+a {
+    display: inline-block;         
+    padding: 10px 20px;             
+    background-color: #347433;    
+    color: white; 
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #245A24;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
