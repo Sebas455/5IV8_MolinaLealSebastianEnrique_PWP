@@ -80,9 +80,6 @@ function calificacion(){
     var parseo1 = parseFloat(parcial1);
     var parseo2 = parseFloat(parcial2);
     var parseo3 = parseFloat(parcial3);
-
-
-
     var prom = (parseo1+parseo2+parseo3)/3;
     var promediofinal = prom*(0.55);
 
@@ -136,6 +133,12 @@ function calcuedad(){
     if (parseo1 < 1960){
         alert("Por favor ingresa un año válido");
         return false;
+    }
+
+    if (parseo1 > 2024){
+        alert("Por favor ingrese un año valido");
+        return false;
+
     }
 
     var edad = 2025-parseo1;
