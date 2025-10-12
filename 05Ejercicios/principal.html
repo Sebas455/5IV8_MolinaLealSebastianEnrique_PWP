@@ -251,7 +251,7 @@
         </form>
     </div>
 
-    <!-- Ejercicio 4 -->
+    <!-- Ejercicio 5 -->
     <div class="container">
         <form method="post" name="formulario" action="">
             <label for="">Calculo alumnos</label>
@@ -260,24 +260,40 @@
                 <table class="table">
                     <tr>
                         <td>
-                            Introduzca la calificacion del examen final con escala del 1-10:
+                            Introduzca la cantidad de alumnos hombres que tiene:
                         </td>
                         <td>
-                            <input type="text" name="examfin" id="examfin" onkeypress="return validarn(event)">
+                            <input type="text" name="hombres" id="hombres" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la cantidad de alumnas mujeres que tiene:
+                        </td>
+                        <td>
+                            <input type="text" name="mujeres" id="mujeres" onkeypress="return validarn(event)">
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <input type="button" value="Calcular calificacion" name="enviar" onclick="calificacion()">
+                            <input type="button" value="Calcular alumnos" name="enviar" onclick="calificacion()">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Su calificacion final es:
+                            Hay:
                         </td>
                         <td>
-                            <input type="text" name="final" id="final" readonly="readonly" class="input_text">
+                            <input type="text" name="totalhombres" id="totalhombres" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Hay:
+                        </td>
+                        <td>
+                            <input type="text" name="totalmujeres" id="totalmujeres" readonly="readonly" class="input_text">
                         </td>
                     </tr>
                     <tr>
