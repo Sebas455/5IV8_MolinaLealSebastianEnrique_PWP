@@ -58,7 +58,7 @@ function comisiones(){
 
 //Ejercio 3
 function descuento(){
-    var precio = document.getElementById("original").value
+    var precio = document.getElementById("original").value;
 
     //Calcular descuento
     var parseo = parseFloat(precio);
@@ -66,6 +66,34 @@ function descuento(){
     var total = (parseo - desc).toFixed(2);
     document.getElementById("total").value = "$ " + total;
     document.getElementById("dis").value = "$ " + desc;
+}
+
+//Ejercicio 4
+function calificacion(){
+    var parcial1 = document.getElementById("parcial1").value;
+    var parcial2 = document.getElementById("parcial2").value;
+    var parcial3 = document.getElementById("parcial3").value;
+    var trabajo = document.getElementById("trabfin").value;
+    var examen = document.getElementById("examfin").value;
+
+    //Calcular promedio parciales
+    var parseo1 = parseFloat(parcial1);
+    var parseo2 = parseFloat(parcial2);
+    var parseo3 = parseFloat(parcial3);
+    var prom = (parseo1+parseo2+parseo3)/3;
+    var promediofinal = prom*(0.55);
+
+    //Calcular promedio examen
+    var parseo4 = parseFloat(examen);
+    var exam = parseo4*(0.3);
+
+    //calcular promedio trabajo
+    var parseo5 = parseFloat(trabajo);
+    var trabajofinal = parseo5*(0.15);
+
+    //Calcular calificacion final
+    var califfinal = trabajofinal+exam+promediofinal;
+    document.getElementById("final").value = (califfinal).toFixed(2);
 }
 
 
@@ -79,4 +107,13 @@ function borrar(){
     document.getElementById("venta3").value = "";
     document.getElementById("sueldo").value = "";
     document.getElementById("comision").value = "";
+    document.getElementById("parcial1").value = "";
+    document.getElementById("parcial2").value = "";
+    document.getElementById("parcial3").value = "";
+    document.getElementById("trabfin").value = "";
+    document.getElementById("examfin").value = "";
+    document.getElementById("final").value = "";
+    document.getElementById("original").value = "";
+    document.getElementById("dis").value = "";
+    document.getElementById("total").value = "";
 }
