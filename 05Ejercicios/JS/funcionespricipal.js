@@ -96,6 +96,26 @@ function calificacion(){
     document.getElementById("final").value = (califfinal).toFixed(2);
 }
 
+//Ejercicio5
+function alumnos(){
+    var hombre = document.getElementById("hombres").value;
+    var mujer = document.getElementById("mujeres").value;
+
+    //Calcular total de alumnos
+    var parseo1 = parseFloat(hombre);
+    var parseo2 = parseFloat(mujer);
+    var cantidad = parseo1+parseo2;
+
+    //Calcular cantidad de hombres
+    var canthom = (parseo1/cantidad)*100;
+
+    //Calcular cantidad mujeres
+    var cantmuj = (parseo2/cantidad)*100;
+
+    document.getElementById("totalhombres").value = canthom + "%";
+    document.getElementById("totalmujeres").value = cantmuj + "%";
+
+}
 
 function borrar(){
     document.getElementById("mesesi").value = "";
@@ -116,4 +136,8 @@ function borrar(){
     document.getElementById("original").value = "";
     document.getElementById("dis").value = "";
     document.getElementById("total").value = "";
+    document.getElementById("hombres").value = "";
+    document.getElementById("mujeres").value = "";
+    document.getElementById("totalhombres").value = "";
+    document.getElementById("totalmujeres").value = "";
 }
