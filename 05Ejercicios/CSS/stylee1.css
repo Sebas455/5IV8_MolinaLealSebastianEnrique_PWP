@@ -1,0 +1,76 @@
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../CSS/fondo.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.container {
+    background: #FF7601;
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 500px;
+
+}
+
+/* Título del formulario */
+.container label {
+    font-family: "Lobster";
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Tabla estilizada */
+.container-table {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "M Plus Rounded 1C";
+}
+
+.table td {
+    padding: 12px 10px;
+    vertical-align: middle;
+    background-color: #F3A26D;
+    background-size: 100%;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 8px ;
+    border: 2px solid #FCECDD;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color:#FCECDD ;
+}
+
+input[type="button"] {
+    background: #347433;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'M Plus Rounded 1C';
+    font-weight: 700;
+}
+
+input[type="button"]:hover {
+    background: #245A24;
+}
+
+.input_text {
+    background: #FCECDD;
+    color: black;
+    font-weight: bold;
+}

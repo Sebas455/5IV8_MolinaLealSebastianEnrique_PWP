@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="./CSS/stylee1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form method="post" name="formulario" action="">
+            <label for="">Calculo de inversion mensual</label>
+            <br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Introduce la cantidad de meses en los que desea invertir:
+                        </td>
+                        <td>
+                            <input type="text" name="meses" id="mesesi" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduce la cantidad que deseas invertir por mes:
+                        </td>
+                        <td>
+                            <input type="text" name="cantidad" id="cantidadi" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Calcular Intereses" name="enviar" onclick="interes()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Su saldo total con el interes es de :
+                        </td>
+                        <td>
+                            <input type="text" name="sueldoi" id="saldoi" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Borrar Datos" name="borrari" onclick="borrar()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+<script src="./JS/funcionese1.js"></script>
+</body>
+</html>
+
