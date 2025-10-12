@@ -51,18 +51,32 @@ function comisiones(){
 
     var ventas = parseo2+parseo3+parseo4;
     var porcentaje = ventas*(.10);
-    var total = parseo1+porcentaje;
+    var total = (parseo1+porcentaje).toFixed(2);
     document.getElementById("sueldo").value = "$ " + total;
-    document.getElementById("comision").value = "$ " + porcentaje;
+    document.getElementById("comision").value = "$ " + (porcentaje).toFixed(2);
 }
 
 //Ejercio 3
+function descuento(){
+    var precio = document.getElementById("original").value
 
+    //Calcular descuento
+    var parseo = parseFloat(precio);
+    var desc = parseo*(.15);
+    var total = (parseo - desc).toFixed(2);
+    document.getElementById("total").value = "$ " + total;
+    document.getElementById("dis").value = "$ " + desc;
+}
 
 
 function borrar(){
+    document.getElementById("mesesi").value = "";
+    document.getElementById("saldoi").value = "";
+    document.getElementById("cantidadi").value = "";
     document.getElementById("base").value = "";
     document.getElementById("venta1").value = "";
     document.getElementById("venta2").value = "";
     document.getElementById("venta3").value = "";
+    document.getElementById("sueldo").value = "";
+    document.getElementById("comision").value = "";
 }

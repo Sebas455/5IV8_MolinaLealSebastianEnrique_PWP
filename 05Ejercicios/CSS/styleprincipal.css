@@ -2,8 +2,10 @@ body {
     background-image: url(../CSS/fondo.jpg);
     background-size: cover;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-top: 10%;
+
 }
 
 .container {
@@ -11,9 +13,7 @@ body {
     padding: 30px 40px;
     border-radius: 12px;
     max-width: 500px;
-    margin-left: 30px;
-    margin-right: 30px;
-
+    margin-bottom: 10%;
 }
 
 .container label {
