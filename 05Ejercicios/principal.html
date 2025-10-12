@@ -307,6 +307,44 @@
         </form>
     </div>
 
+    <!-- Ejercicio 6 -->
+    <div class="container">
+        <form method="post" name="formulario" action="">
+            <label for="">Calculo edad</label>
+            <br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Ingresa el año en el que naciste:
+                        </td>
+                        <td>
+                            <input type="text" name="fecha" id="fecha" onkeypress="return validarn(event)">
+                        </td>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Calcular edad" name="enviar" onclick="alumnos()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Total de hombres:
+                        </td>
+                        <td>
+                            <input type="text" name="edadfinal" id="edadfinal" readonly="readonly" class="input_text">
+                        </td>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Borrar Datos" name="borrari" onclick="calcuedad()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
     <script src="./JS/funcionespricipal.js"></script>
 </body>
 </html>
