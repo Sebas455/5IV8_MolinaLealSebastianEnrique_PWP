@@ -65,7 +65,7 @@ function descuento(){
     var desc = parseo*(.15);
     var total = (parseo - desc).toFixed(2);
     document.getElementById("total").value = "$ " + total;
-    document.getElementById("dis").value = "$ " + desc;
+    document.getElementById("dis").value = "$ " + (desc).toFixed(2);
 }
 
 //Ejercicio 4
