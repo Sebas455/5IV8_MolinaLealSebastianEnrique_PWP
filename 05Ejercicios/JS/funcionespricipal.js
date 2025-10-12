@@ -80,6 +80,9 @@ function calificacion(){
     var parseo1 = parseFloat(parcial1);
     var parseo2 = parseFloat(parcial2);
     var parseo3 = parseFloat(parcial3);
+
+
+
     var prom = (parseo1+parseo2+parseo3)/3;
     var promediofinal = prom*(0.55);
 
@@ -90,6 +93,12 @@ function calificacion(){
     //calcular promedio trabajo
     var parseo5 = parseFloat(trabajo);
     var trabajofinal = parseo5*(0.15);
+
+    //Validar calificaciones
+    if(parseo1 > 10 || parseo2 > 10 || parseo3 > 10 || parseo4 > 10 || parseo5 > 10){
+        alert("Por favor ingrese califcaciones válidas");
+        return false;
+    }
 
     //Calcular calificacion final
     var califfinal = trabajofinal+exam+promediofinal;
