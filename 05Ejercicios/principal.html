@@ -179,7 +179,117 @@
         </form>
     </div>
 
+    <!-- Ejercicio 4 -->
+    <div class="container">
+        <form method="post" name="formulario" action="">
+            <label for="">Calculo calificación final</label>
+            <br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Introduzca la calificacion del 1° con escala del 1-10:
+                        </td>
+                        <td>
+                            <input type="text" name="parcial1" id="parcial1" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la calificacion del 2° con escala del 1-10:
+                        </td>
+                        <td>
+                            <input type="text" name="parcial2" id="parcial2" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la calificacion del 3° con escala del 1-10:
+                        </td>
+                        <td>
+                            <input type="text" name="parcial3" id="parcial3" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la calificacion del trabajo final con escala del 1-10:
+                        </td>
+                        <td>
+                            <input type="text" name="trabfin" id="trabfin" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la calificacion del examen final con escala del 1-10:
+                        </td>
+                        <td>
+                            <input type="text" name="examfin" id="examfin" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Calcular calificacion" name="enviar" onclick="calificacion()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Su calificacion final es:
+                        </td>
+                        <td>
+                            <input type="text" name="final" id="final" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Borrar Datos" name="borrari" onclick="borrar()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
 
+    <!-- Ejercicio 4 -->
+    <div class="container">
+        <form method="post" name="formulario" action="">
+            <label for="">Calculo alumnos</label>
+            <br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Introduzca la calificacion del examen final con escala del 1-10:
+                        </td>
+                        <td>
+                            <input type="text" name="examfin" id="examfin" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Calcular calificacion" name="enviar" onclick="calificacion()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Su calificacion final es:
+                        </td>
+                        <td>
+                            <input type="text" name="final" id="final" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Borrar Datos" name="borrari" onclick="borrar()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
 
     <script src="./JS/funcionespricipal.js"></script>
 </body>
