@@ -114,6 +114,23 @@ function alumnos(){
 
     document.getElementById("totalhombres").value = canthom + "%";
     document.getElementById("totalmujeres").value = cantmuj + "%";
+    
+}
+
+//Ejercicio 6
+function calcuedad(){
+    var año = document.getElementById("fecha").value;
+
+    //Calcular edad
+    var parseo1 = parseFloat(año);
+
+    if (parseo1 < 1960){
+        alert("Por favor ingresa un año válido");
+        return false;
+    }
+
+    var edad = 2025-parseo1;
+    document.getElementById("edadfinal").value = edad + " años";
 
 }
 
@@ -140,4 +157,7 @@ function borrar(){
     document.getElementById("mujeres").value = "";
     document.getElementById("totalhombres").value = "";
     document.getElementById("totalmujeres").value = "";
+    document.getElementById("fecha").value = "";
+    document.getElementById("edadfinal").value = "";
 }
+
