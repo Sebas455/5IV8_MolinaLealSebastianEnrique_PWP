@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form method="post" name="formulario" action="">
+            <label for="">Calculo sueldo con comisiones</label>
+            <br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Introduzca su sueldo base:
+                        </td>
+                        <td>
+                            <input type="text" name="base" id="base" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la venta 1:
+                        </td>
+                        <td>
+                            <input type="text" name="venta1" id="venta1" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la venta 2:
+                        </td>
+                        <td>
+                            <input type="text" name="venta2" id="venta2" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Introduzca la venta 3:
+                        </td>
+                        <td>
+                            <input type="text" name="venta3" id="venta3" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Calcular sueldo" name="enviar" onclick="interes()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Su sueldo final es de:
+                        </td>
+                        <td>
+                            <input type="text" name="sueldo" id="saldo" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Borrar Datos" name="borrari" onclick="borrar()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+<script src="./JS/funcionese1.js"></script>
+</body>
+</html>
