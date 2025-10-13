@@ -1,0 +1,108 @@
+ 
+  body {
+    background-color: #f2f4f7;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 800px;
+    margin: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  
+  /* Títulos */
+  .problema-title {
+    font-size: 1.8rem;
+    font-family: 'Lobster';
+    color: #347433;
+    margin-bottom: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'M Plus Rounded 1C';
+    margin-bottom: 1rem;
+  }
+  
+  /* Contenido */
+  .problema-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Inputs */
+  .problema-input {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .problema-input:focus {
+    outline: none;
+    border-color: #347433;
+    box-shadow: 0 0 0 3px rgba(52, 116, 51, 0.2);
+  }
+  
+  /* Botones */
+  .problema-button {
+    background-color: #347433;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .problema-button:hover {
+    background-color: #2b5d2a;
+    transform: scale(1.02);
+  }
+  
+  /* Output */
+  .problema-output {
+    background-color: #f7f9f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.8rem;
+    min-height: 40px;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    color: #222;
+  }
+  
+  /* Tablas */
+  .problema-table {
+    border-collapse: collapse;
+    margin: 0.5rem;
+    background-color: #f8faf9;
+    border: 1px solid #ddd;
+  }
+  
+  .problema-table th {
+    background-color: #347433;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .problema-table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .problema-table input {
+    width: 90%;
+  }
+  
