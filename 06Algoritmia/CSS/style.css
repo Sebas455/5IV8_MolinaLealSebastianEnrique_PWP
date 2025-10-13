@@ -1,20 +1,24 @@
  
   body {
-    background-color: #f2f4f7;
+    background-image: url(../CSS/fondo.jpg);
     color: #333;
     padding: 2rem;
+
+
   }
   
-  /* Contenedor principal */
   .container {
     max-width: 800px;
     margin: 2rem;
-    background-color: #ffffff;
+    background-color: #F3A26D;
     border-radius: 12px;
     padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
   }
   
-  /* Títulos */
   .problema-title {
     font-size: 1.8rem;
     font-family: 'Lobster';
@@ -29,7 +33,6 @@
     margin-bottom: 1rem;
   }
   
-  /* Contenido */
   .problema-content {
     display: flex;
     flex-direction: column;
@@ -37,25 +40,24 @@
     margin-top: 0.5rem;
   }
   
-  /* Inputs */
   .problema-input {
     padding: 0.6rem 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid #E58543;
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #FFC7A1;
   }
   
   .problema-input:focus {
     outline: none;
-    border-color: #347433;
-    box-shadow: 0 0 0 3px rgba(52, 116, 51, 0.2);
+    border-color: #733818;
   }
   
-  /* Botones */
   .problema-button {
-    background-color: #347433;
-    color: #fff;
+    background-color: #FFB300;
+    color: white;
+    border-color: #FF8F00;
     font-size: 1rem;
     padding: 0.6rem 1rem;
     border: none;
@@ -65,14 +67,13 @@
   }
   
   .problema-button:hover {
-    background-color: #2b5d2a;
+    background-color: #FF8F00;
     transform: scale(1.02);
   }
   
-  /* Output */
   .problema-output {
-    background-color: #f7f9f8;
-    border: 1px solid #ccc;
+    background-color: #FFC7A1;
+    border: 1px solid #E58543;
     border-radius: 8px;
     padding: 0.8rem;
     min-height: 40px;
@@ -81,12 +82,11 @@
     color: #222;
   }
   
-  /* Tablas */
   .problema-table {
     border-collapse: collapse;
     margin: 0.5rem;
-    background-color: #f8faf9;
-    border: 1px solid #ddd;
+    background-color: #E58543;
+    border: 1px solid #733818;
   }
   
   .problema-table th {
@@ -97,7 +97,7 @@
   }
   
   .problema-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #733818;
     padding: 0.5rem;
     text-align: center;
   }
@@ -119,9 +119,9 @@
     transition: all 0.3s ease;
   }
 
-    a:hover {
+  a:hover {
      background-color: #245A24;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+  }
   
