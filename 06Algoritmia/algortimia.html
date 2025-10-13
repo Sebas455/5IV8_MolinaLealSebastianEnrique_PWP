@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de uso de algoritmia</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class="container">
@@ -110,12 +114,13 @@
         Considera solamente el alfabeto de la A-Z en mayúsculas, las palabras ingresadas deberan estar separadas por una coma, no se aceptan espacios.
         </h3>
         <div class="problema-content">
-            <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por una coma: " id="p3-input">
-            <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="">Calcular palabras</button>
+            <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por una coma: " id="p3-input" onkeypress="return validarn(event)">
+            <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema3()">Calcular palabras</button>
             <pre class="problema-output" id="p3-output">Esperando datos...</pre>
         </div>
     </div>
    </div> 
-   <script src="./algoritmia.js"></script>
+   <script src="./JS/algoritmia.js"></script>
+   <a href="../index.html">Regresar al menú principal</a>
 </body>
 </html>
