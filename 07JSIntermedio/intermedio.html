@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSIntermedio</title>
+</head>
+<body>
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">
+                Problema 1
+            </h2>
+            <h3>
+                Deberán de crear un formulario en el cual se deben de leer 2 números, si son iguales que los múltiplique, si el primero mayor que el segundo que los reste y sino que los sume. </h3>
+            <form method="get" action="" id="formulario" name="formulario" onsubmit="return ejercicio1(this)">
+                <label for="">Número 1</label><input type="number" class="num1" id="num1" placeholder="Ingrese el primer número">
+                <br>
+                <label for="">Número 2</label><input type="number" class="num2" id="num2" placeholder="Ingrese el segundo número">
+                <br>
+                <input type="submit" name="calcular" value="Calcular" id="">
+                <br>
+                <input type="reset" name="borrar" value="Borrar Datos" id="">
+                </form>
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">
+                Problema 2
+            </h2>
+            <h3>Leer tres números diferentes e imprimir el numero mayor de los 3.</h3>
+            <div class="problema-content">
+                <input type="text" class="problema-input" placeholder="Ingresa el primer número" id="n1">
+                <input type="text" class="problema-input" placeholder="Ingresa el segundo número" id="n2">
+                <input type="text" class="problema-input" placeholder="Ingresa el tercer número" id="n3">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema2()">Conseguir mayor</button>
+            </div>
+            
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">
+                Problema 3
+            </h2>
+            <h3>Determinar la cantidad de dinero que recibe un trabajador por concepto de hrs extra trabajadas dentro de la empresa, sabiendo que cuando las horas de trabajo exceden de 40, el resto se consideran hrs extra, y que estas se pagan al doble de una hora normal, cuando no exceden de 8, si las hrs extra exceden de 8 se pagan las primeras 8 al doble y el resto al triple.</h3>
+            <div class="problema-content">
+                <input type="number" class="problema-input" placeholder="Ingresa la cantidad de horas que trabajaste en total" id="horas">
+                <input type="number" class="problema-input" placeholder="Ingresa la cantidad que te pagan por hora" id="cantidad">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema3()">Calcular pago extra</button>
+            </div>
+            
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="problema-container">
+            <h2 class="problema-title">
+                Problema 4
+            </h2>
+            <h3>Calcular la utilidad de un trabajador que recibe le reparto de utilidades anual, si este se le asigna un porcentaje de acuerdo a su salario mensual y depende de la antigüedad de la empresa</h3>
+            <div class="problema-content">
+                <input type="number" class="problema-input" placeholder="Ingresa la cantidad de horas que trabajaste en total" id="horas">
+                <input type="number" class="problema-input" placeholder="Ingresa la cantidad que te pagan por hora" id="cantidad">
+                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema()">Calcular pago extra</button>
+            </div>
+            
+        </div>
+    </div> 
+
+
+    <script src="./funcionesintermedio.js"></script>
+</body>
+</html>
