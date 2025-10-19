@@ -1,0 +1,94 @@
+body {
+    background-image: url(./fondo.jpg);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #F3A26D;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #FF7601;
+  }
+  
+
+  .problema-title {
+    font-size: 1.8rem;
+    color: black;
+    font-family: 'lobster';
+    font-weight: 900;
+  }
+  
+  h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: 'M Plus Rounded 1C'; 
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+
+  .problema-input, .num1, .num2 {
+    width: 100%;
+    font-family: 'M Plus Rounded 1C'; 
+    font-weight: 700;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    background-color: #FCECDD;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+
+  .problema-button, input[type="submit"], input[type="reset"] {
+    background-color: #347433;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    font-family: 'M Plus Rounded 1C'; 
+    font-weight: 900;
+  }
+  
+  .problema-button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #234D28;
+  }
+  
+
+  form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    font-family: 'M Plus Rounded 1C'; 
+
+  }
+  
+  form input[type="number"] {
+    width: 100%;
+  }
+
+  a {
+    display: inline-block;         
+    padding: 10px 20px;             
+    background-color: #347433;    
+    color: white; 
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+     background-color: #245A24;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  

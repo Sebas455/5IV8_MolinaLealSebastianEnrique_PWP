@@ -110,7 +110,10 @@ function ejercicio1(formulario){
     var num1 = parseFloat(formulario.num1.value);
     var num2 = parseFloat(formulario.num2.value);
 
-
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor ingresa valores.");
+        return;
+      }
 
     if (num1 === num2) {
         resultado = num1 * num2;
@@ -146,7 +149,7 @@ function problema2(){
 
 function problema3(){
     const horasTrabajadas = parseFloat(document.getElementById("horas").value);
-  const pagoporhora = parseFloat(document.getElementById("cantidad").value);
+    const pagoporhora = parseFloat(document.getElementById("cantidad").value);
 
   //Validar que ponga una cantidad de horas trabajadas válida
   if (horasTrabajadas > 60 ) {
@@ -154,6 +157,10 @@ function problema3(){
     return;
   }
 
+  if (isNaN(horasTrabajadas) || isNaN(pagoporhora)) {
+    alert("Por favor ingresa algún número.");
+    return;
+  }
 
 
   if (horasTrabajadas <= 40) {
@@ -174,3 +181,36 @@ function problema3(){
 
   alert("Total a pagar: $" + pagoTotal.toFixed(2));
 }
+
+function problema4() {
+    const salario = parseFloat(document.getElementById("salario").value);
+    const antiguedad = parseFloat(document.getElementById("antiguedad").value);
+  
+    if (antiguedad > 70) {
+      alert("Por favor ingresa una cantidad de años valida.");
+      return;
+    }
+
+    if (isNaN(salario) || isNaN(antiguedad)) {
+        alert("Por favor ingresa algún número.");
+        return;
+      }
+  
+    if (antiguedad < 1) {
+        porcentaje = 0.05;
+      } else if (antiguedad >= 1 && antiguedad < 2) {
+        porcentaje = 0.07;
+      } else if (antiguedad >= 2 && antiguedad < 5) {
+        porcentaje = 0.10;
+      } else if (antiguedad >= 5 && antiguedad < 10) {
+        porcentaje = 0.15;
+      } else {
+        porcentaje = 0.20;
+      }
+  
+    // Calcular utilidad anual
+    const utilidad = salario * porcentaje * 12;
+  
+    alert("Tu utilidad anual es: $" + utilidad.toFixed(2));
+}
+  

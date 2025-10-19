@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSIntermedio</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -58,20 +62,24 @@
 
     <div class="container">
         <div class="problema-container">
-            <h2 class="problema-title">
-                Problema 4
-            </h2>
-            <h3>Calcular la utilidad de un trabajador que recibe le reparto de utilidades anual, si este se le asigna un porcentaje de acuerdo a su salario mensual y depende de la antigüedad de la empresa</h3>
-            <div class="problema-content">
-                <input type="number" class="problema-input" placeholder="Ingresa la cantidad de horas que trabajaste en total" id="horas">
-                <input type="number" class="problema-input" placeholder="Ingresa la cantidad que te pagan por hora" id="cantidad">
-                <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema()">Calcular pago extra</button>
-            </div>
-            
+          <h2 class="problema-title">Problema 4</h2>
+          <h3>
+            Calcular la utilidad de un trabajador que recibe el reparto de utilidades anual, si este se le asigna un porcentaje de acuerdo a su salario mensual y depende de la antigüedad en la empresa.<br>
+            menos de 1 año 5%<br>
+1 a 2 años 7%<br>
+2 a 5 años 10 %<br>
+5 a 10 años 15%<br>
+mas de 10 20%<br>
+          </h3>
+          <div class="problema-content">
+            <input type="number" class="problema-input" placeholder="Ingresa tu salario mensual" id="salario">
+            <input type="number" class="problema-input" placeholder="Ingresa tu antiguedad en años" id="antiguedad">
+            <button type="button" class="problema-button" style="margin-top: 1rem;" onclick="problema4()">Calcular utilidad</button>
+          </div>
         </div>
-    </div> 
+      </div>
 
-
+    <a href="../index.html">Regresar al menú principal</a>
     <script src="./funcionesintermedio.js"></script>
 </body>
 </html>
