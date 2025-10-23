@@ -71,12 +71,12 @@ posicion[]][] = arreglo[][]
 */
 
 function intercambiarPosicionesRompe(filaPos1, columnaPos1, filaPos2, columnaPos2){
-    var pos1 = rompe[filaPos1, columnaPos1];
-    var pos2 = rompe[filaPos2, columnaPos2];
+    var pos1 = rompe[filaPos1][columnaPos1];
+    var pos2 = rompe[filaPos2][columnaPos2];
 
     //intercambiar
-    rompe[filaPos1, columnaPos1] = pos2;
-    rompe[filaPos2, columnaPos2] = pos1;
+    rompe[filaPos1][columnaPos1] = pos2;
+    rompe[filaPos2][columnaPos2] = pos1;
 }
 
 function actualizarPosicionVacia(nuevaFila, nuevaColumna){
@@ -130,6 +130,11 @@ function moverEnDireccion(direccion){
     
 }
 
+function agregarUltimoMovimiento(direccion){
+    movimientos.push(direccion);
+    actualizarUltimoMovimiento(direccion);
+}
+
 function intercambiarPosiciones(fila1, columna1, fila2, columna2){
     var pieza1 = rompe[fila1][columna1];
     var pieza2 = rompe[fila2][columna2];
@@ -145,7 +150,6 @@ function intercambiarPosicionesDOM(idPieza1, idPieza2){
     var pieza1 = document.getElementById(idPieza1);
     var pieza2 = document.getElementById(idPieza2);
 
-    console.log(pieza1);
 
     //vamos a clonarlas
     var padre1 = pieza1.parentNode;
@@ -165,16 +169,16 @@ function actualizarUltimoMovimiento(direccion){
     var ultimoMovimiento = document.getElementById("flecha");
     switch(direccion){
         case codigosDireccion.ARRIBA:
-            ultimoMovimiento.textContent = "";
+            ultimoMovimiento.textContent = "↑";
             break;
         case codigosDireccion.ABAJO:
-            ultimoMovimiento.textContent = "";
+            ultimoMovimiento.textContent = "↓";
             break;
         case codigosDireccion.DERECHA:
-            ultimoMovimiento.textContent = "";
+            ultimoMovimiento.textContent = "→";
             break;
         case codigosDireccion.IZQUIERDA:
-            ultimoMovimiento.textContent = "";
+            ultimoMovimiento.textContent = "←";
             break;
     }
 }
@@ -212,7 +216,7 @@ function capturarTeclas(){
             }
             evento.preventDefault();
         }
-    })
+    });
 }
 
 
