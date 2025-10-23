@@ -14,7 +14,7 @@ var rompe = [
 ]
 
 //vamos a crear una matriz en la que tengamos las posiciones correctas
-var rompecorrecta= [
+var rompecorrecta = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
@@ -137,7 +137,7 @@ function intercambiarPosiciones(fila1, columna1, fila2, columna2){
     //intercambio ya debe de ser por partre de los frames y el html
     intercambiarPosicionesRompe(fila1, columna1, fila2, columna2);
     //para el html
-    intercambiarPosicionesDOM('pieza'+ pieza1, 'pieza'+ pieza2);
+    intercambiarPosicionesDOM('pieza'+pieza1, 'pieza'+pieza2);
     
 }
 
@@ -145,20 +145,19 @@ function intercambiarPosicionesDOM(idPieza1, idPieza2){
     var pieza1 = document.getElementById(idPieza1);
     var pieza2 = document.getElementById(idPieza2);
 
-    var elementoPieza1 = pieza1.ELEMENT_NODE;
-
+    console.log(pieza1);
 
     //vamos a clonarlas
-    var padre1 = elementoPieza1.parent.Node;
-    var padre2 = elementoPieza2.parent.Node;
+    var padre1 = pieza1.parentNode;
+    var padre2 = pieza2.parentNode;
 
     //lo clono
     var clonElemento1 = pieza1.cloneNode(true);
     var clonElemento2 = pieza2.cloneNode(true);
 
     //Reemplazar a los padres por sus clones
-    padre1.replaceChild(clonElemento1, elementoPieza2);
-    padre2.replaceChild(clonElemento2, elementoPieza1);
+    padre1.replaceChild(clonElemento1, pieza2);
+    padre2.replaceChild(clonElemento2, pieza1);
 }
 
 //debo de actualizar los movimeintos en el DOM
