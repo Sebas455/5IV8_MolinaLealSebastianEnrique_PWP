@@ -234,4 +234,34 @@ iniciar();
 mostrarInstrucciones(instrucciones);
 
 
+//cambiar imagen de fondo
+var imagenesSets = [
+    {
+        piezas: ["10.jpg", "20.jpg", "30.jpg", "40.jpg", "50.jpg", "60.jpg", "70.jpg", "80.jpg"],
+        final: "final.png"
+    },
+    {
+        piezas: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg"],
+        final: "pikachufinal.jpg"
+    }
+];
+var indiceImagenActual = 0;
 
+function cambiarImagenes() {
+    indiceImagenActual = (indiceImagenActual + 1) % imagenesSets.length;
+    var nuevoSet = imagenesSets[indiceImagenActual];
+
+    for (var i = 1; i <= 8; i++) {
+        var pieza = document.querySelector("#pieza" + i + " img");
+        if (pieza) {
+            pieza.src = "./recursosrompecabezas/images/" + nuevoSet.piezas[i - 1];
+        }
+    }
+
+    var objetivo = document.querySelector("#objetivo img");
+    if (objetivo) {
+        objetivo.src = "./recursosrompecabezas/images/" + nuevoSet.final;
+    }
+
+    console.log("Set cambiado a:", nuevoSet.final);
+}

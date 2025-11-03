@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animación LOVE con mo.js</title>
+    <style>
+      body {
+        background: #111;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .letters span {
+        font-size: 80px;
+        margin: 0 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <!-- Cargar mo.js desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <!-- Tu archivo JS -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="letters">
+      <span id="l">L</span>
+      <span id="o">O</span>
+      <span id="v">V</span>
+      <span id="e">E</span>
+    </div>
+  </body>
+</html>

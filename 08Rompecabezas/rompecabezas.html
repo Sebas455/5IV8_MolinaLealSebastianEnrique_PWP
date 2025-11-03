@@ -10,9 +10,9 @@
     <div class="col-40">
         <div id="titulo">
             <h1>Rompecabezas</h1>
-            <div id="iniciarBoton" onclick="">
+            <button id="iniciarBoton" onclick="mezclarPiezas(event)">
                 Mezclar de Nuevo las Piezas
-            </div>
+            </button>
             <div id="instrucciones">
                 <h2>Instrucciones del juego</h2>
                 <ul id="lista-instrucciones"></ul>
@@ -27,6 +27,9 @@
                 <h2>Ultimo Movimiento</h2>
                 <div id="flecha" class="texto-centrado"></div>
             </div>
+            <button id="cambiarImagenBoton" onclick="cambiarImagenes()">
+                Cambiar Imagen del Rompecabezas
+            </button>
         </div>
     </div>
 

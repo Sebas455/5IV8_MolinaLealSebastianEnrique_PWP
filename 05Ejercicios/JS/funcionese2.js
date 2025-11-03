@@ -23,7 +23,7 @@ function comisiones(){
     var ventas = parseo2+parseo3+parseo4;
     var porcentaje = ventas*(.10);
     var total = parseo1+porcentaje;
-    document.getElementById("base").value = "$ " + total;
+    document.getElementById("sueldo").value = "$ " + total;
 }
 
 function borrar(){

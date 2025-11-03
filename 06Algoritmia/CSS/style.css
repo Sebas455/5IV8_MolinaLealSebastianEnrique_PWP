@@ -3,8 +3,6 @@
     background-image: url(../CSS/fondo.jpg);
     color: #333;
     padding: 2rem;
-
-
   }
   
   .container {
@@ -55,7 +53,7 @@
   }
   
   .problema-button {
-    background-color: #FFB300;
+    background-color: #347433;
     color: white;
     border-color: #FF8F00;
     font-size: 1rem;
@@ -67,7 +65,7 @@
   }
   
   .problema-button:hover {
-    background-color: #FF8F00;
+    background-color: #234D28;
     transform: scale(1.02);
   }
   
@@ -85,12 +83,12 @@
   .problema-table {
     border-collapse: collapse;
     margin: 0.5rem;
-    background-color: #E58543;
+    background-color: #F99550;
     border: 1px solid #733818;
   }
   
   .problema-table th {
-    background-color: #347433;
+    background-color: #FFD54F;
     color: #fff;
     padding: 0.5rem;
     text-align: center;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post" name="formulario" action="">
+            <label for="">Calculo sueldo con comisiones</label>
+            <br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>
+                            Introduzca el precio original de la compra:
+                        </td>
+                        <td>
+                            <input type="text" name="original" id="original" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Calcular total" name="enviar" onclick="comisiones()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Su total final es de :
+                        </td>
+                        <td>
+                            <input type="text" name="total" id="total" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Borrar Datos" name="borrari" onclick="borrar()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+<script src="./JS/funcionese2.js"></script>
+</body>
+</html>
