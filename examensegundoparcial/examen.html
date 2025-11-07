@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razas de perros</title>
+    <link rel="stylesheet" href="./CSS/examen.css">
+</head>
+<body>
+    <input type="text" id="RazaPerro" placeholder="Escribe una raza de perro" />
+    <button id="btnBuscar">Buscar</button>
+    <div id="imagen">
+        <img src="./img/perro.png" alt="PerroImagen">
+    </div>
+    <table class="perros-tabla">
+        <thead>
+            <tr>
+                <th>Característica</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Propósito</td>
+                <td id="proposito"></td>
+            </tr>
+            <tr>
+                <td>Grupo de Raza</td>
+                <td id="grupoRaza"></td>
+            </tr>
+            <tr>
+                <td>Esperanza de Vida</td>
+                <td id="vida"></td>
+            </tr>
+            <tr>
+                <td>Personalidad</td>
+                <td id="personalidad"></td>
+            </tr>
+            <tr>
+                <td>Peso</td>
+                <td id="peso"></td>
+            </tr>
+            <tr>
+                <td>Estatura</td>
+                <td id="estatura"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="perros-tabla">
+        <thead>
+            <tr>
+            <td>Razas con las que puedes intentar</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Basset Hound"</td></tr>
+            <tr><td>Cairn Terrier</td></tr>
+            <tr><td>American Bulldog</td></tr>
+            <tr><td>American Staffordshire Terrier</td></tr>
+            <tr><td>Barbet</td></tr>
+            <tr><td>Beauceron</td></tr>
+        </tbody>
+    </table>
+    <script src="./fetch.js"></script>
+</body>
+</html>
