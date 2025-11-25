@@ -9,7 +9,7 @@ require('dotenv').config({ path: './.env' });
 const app = express();
 const port = 3000;
 
-// Configuración de conexión a MySQL
+
 const bd = mysql.createConnection({
     host: process.env.BD_HOST,
     user: process.env.BD_USER,
@@ -25,29 +25,31 @@ bd.connect((error) => {
     }
 });
 
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-
 app.use('/css', express.static(path.join(__dirname, 'css')));
 
-// Validación 
+// Validación de fecha
 function validarFecha(fechaStr) {
     const fechaMinima = new Date('2000-01-01T00:00:00');
     const fechaIngresada = new Date(fechaStr);
     const hoy = new Date();
 
-    if (fechaIngresada < fechaMinima) {
-        return false; 
-    }
-    if (fechaIngresada > hoy) {
-        return false; 
-    }
+    if (fechaIngresada < fechaMinima) return false;
+    if (fechaIngresada > hoy) return false;
     return true;
+}
+
+// Validación de texto
+function validarTexto(texto) {
+    if (!texto) return 'ok'; // permitir vacío si el campo lo admite
+    if (texto.length > 50) return 'longitud'; // demasiado largo
+    if (/drop\s+database/i.test(texto)) return 'drop'; // contiene DROP DATABASE
+    return 'ok';
 }
 
 // Mostrar formulario y lista de reportes
@@ -75,8 +77,21 @@ app.post('/reportes', (req, res) => {
         tiempo_inactividad
     } = req.body;
 
+    // Validación de fecha
     if (!validarFecha(fecha_hora_reporte)) {
         return res.status(400).send('La fecha ingresada no es válida (mínimo año 2000 y no futuro)');
+    }
+
+    // Validación de texto
+    const campos = [id_equipo_afectado, sintoma_reportado, diagnostico_tecnico, accion_correctiva, piezas_reemplazadas, tiempo_inactividad];
+    for (let campo of campos) {
+        const resultado = validarTexto(campo);
+        if (resultado === 'longitud') {
+            return res.status(400).send('El texto no puede tener más de 50 caracteres');
+        }
+        if (resultado === 'drop') {
+            return res.status(400).send('No se permite escribir "DROP DATABASE" en los campos');
+        }
     }
 
     const query = `
@@ -146,8 +161,21 @@ app.post('/reportes/update/:id', (req, res) => {
         tiempo_inactividad
     } = req.body;
 
+    // Validación de fecha
     if (!validarFecha(fecha_hora_reporte)) {
         return res.status(400).send('La fecha ingresada no es válida (mínimo año 2000 y no futuro)');
+    }
+
+    // Validación de texto
+    const campos = [id_equipo_afectado, sintoma_reportado, diagnostico_tecnico, accion_correctiva, piezas_reemplazadas, tiempo_inactividad];
+    for (let campo of campos) {
+        const resultado = validarTexto(campo);
+        if (resultado === 'longitud') {
+            return res.status(400).send('El texto no puede tener más de 50 caracteres');
+        }
+        if (resultado === 'drop') {
+            return res.status(400).send('No se permite escribir "DROP DATABASE" en los campos');
+        }
     }
 
     const query = `
@@ -179,4 +207,3 @@ app.post('/reportes/update/:id', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
-
