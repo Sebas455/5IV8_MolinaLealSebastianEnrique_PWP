@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición de Reporte de Avería</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Actualización de Reporte de Avería</h1>
+
+    <form action="/reportes/update/<%= reporte.id_reporte %>" method="POST">
+
+        <label for="fecha_hora_reporte">Fecha y Hora del Reporte:</label>
+        <input type="datetime-local" id="fecha_hora_reporte" name="fecha_hora_reporte" value="<%= reporte.fecha_hora_reporte.toISOString().slice(0,16) %>" required>
+
+        <label for="id_equipo_afectado">ID de Equipo Afectado:</label>
+        <input type="text" id="id_equipo_afectado" name="id_equipo_afectado" value="<%= reporte.id_equipo_afectado %>" required>
+
+        <label for="sintoma_reportado">Síntoma/Fallo Reportado:</label>
+        <textarea id="sintoma_reportado" name="sintoma_reportado" required><%= reporte.sintoma_reportado %></textarea>
+
+        <label for="diagnostico_tecnico">Diagnóstico del Técnico:</label>
+        <textarea id="diagnostico_tecnico" name="diagnostico_tecnico"><%= reporte.diagnostico_tecnico %></textarea>
+
+        <label for="accion_correctiva">Acción Correctiva:</label>
+        <textarea id="accion_correctiva" name="accion_correctiva"><%= reporte.accion_correctiva %></textarea>
+
+        <label for="piezas_reemplazadas">Piezas Reemplazadas:</label>
+        <textarea id="piezas_reemplazadas" name="piezas_reemplazadas"><%= reporte.piezas_reemplazadas %></textarea>
+
+        <label for="tiempo_inactividad">Tiempo de Inactividad:</label>
+        <input type="text" id="tiempo_inactividad" name="tiempo_inactividad" value="<%= reporte.tiempo_inactividad %>">
+
+        <button type="submit">Actualizar Reporte</button>
+    </form>
+</body>
+</html>

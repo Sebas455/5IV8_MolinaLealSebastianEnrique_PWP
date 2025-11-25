@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes de Averías</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Lobster&family=M+PLUS+Rounded+1c:wght@100;400;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Registro de Reportes de Averías</h1>
+
+    <form action="/reportes" method="POST">
+
+        <label for="fecha_hora_reporte">Fecha y Hora del Reporte:</label>
+        <input type="datetime-local" id="fecha_hora_reporte" name="fecha_hora_reporte" required>
+
+        <label for="id_equipo_afectado">ID de Equipo Afectado:</label>
+        <input type="text" id="id_equipo_afectado" name="id_equipo_afectado" required>
+
+        <label for="sintoma_reportado">Síntoma/Fallo Reportado:</label>
+        <textarea id="sintoma_reportado" name="sintoma_reportado" required></textarea>
+
+        <label for="diagnostico_tecnico">Diagnóstico del Técnico:</label>
+        <textarea id="diagnostico_tecnico" name="diagnostico_tecnico"></textarea>
+
+        <label for="accion_correctiva">Acción Correctiva:</label>
+        <textarea id="accion_correctiva" name="accion_correctiva"></textarea>
+
+        <label for="piezas_reemplazadas">Piezas Reemplazadas:</label>
+        <textarea id="piezas_reemplazadas" name="piezas_reemplazadas"></textarea>
+
+        <label for="tiempo_inactividad">Tiempo de Inactividad:</label>
+        <input type="text" id="tiempo_inactividad" name="tiempo_inactividad">
+
+        <button type="submit">Registrar Reporte</button>
+    </form>
+
+
+    <h2>Lista de Reportes</h2>
+    <ul>
+        <% reportes.forEach(function(reporte){ %>
+            <li>
+                <strong>ID Equipo:</strong> <%= reporte.id_equipo_afectado %> |
+                <strong>Fallo:</strong> <%= reporte.sintoma_reportado %> |
+                <strong>Fecha:</strong> <%= reporte.fecha_hora_reporte.toLocaleString() %>
+
+                <a href="/reportes/edit/<%= reporte.id_reporte %>">Editar</a>
+                <a href="/reportes/delete/<%= reporte.id_reporte %>">Eliminar</a>
+            </li>
+        <% }); %>
+    </ul>
+
+</body>
+</html>
