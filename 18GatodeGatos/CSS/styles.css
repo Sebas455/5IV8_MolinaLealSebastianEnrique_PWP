@@ -53,14 +53,25 @@ body {
     cursor: pointer;
     border-radius: 6px;
     transition: background 0.2s ease;
+    transform: scale(1);
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    line-height: 1;
   }
   
   .cell:hover {
     background: #4b5563; /* solo cambio de color */
+    transform: scale(1);
   }
   
   .cell:active {
     background: #374151; /* mantiene tamaño, solo color */
+    transform: scale(1);
   }
   
   .cell.win {

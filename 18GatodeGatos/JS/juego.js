@@ -46,20 +46,17 @@ function handleCellClick(e) {
   const boardIndex = parseInt(cell.dataset.board);
   const cellIndex = parseInt(cell.dataset.index);
 
-  // Si el tablero obligatorio ya está lleno o ganado, liberar
-  if (nextBoard !== null) {
-    if (bigBoard[nextBoard] !== '' || !boards[nextBoard].includes('')) {
-      nextBoard = null;
-    }
-  }
-
-  // Validar turno en tablero correcto
-  if (nextBoard !== null && nextBoard !== boardIndex) {
-    return; // no puedes jugar aquí
-  }
-
+  // Verificar si la celda ya está ocupada
   if (boards[boardIndex][cellIndex] !== '') return;
 
+  // Verificar si se debe jugar en tablero específico
+  let mustPlayInBoard = nextBoard !== null && bigBoard[nextBoard] === '';
+  
+  if (mustPlayInBoard && nextBoard !== boardIndex) {
+    return; // no puedes jugar aquí, debes jugar en el tablero indicado
+  }
+
+  // Realizar la jugada
   boards[boardIndex][cellIndex] = currentPlayer;
   cell.textContent = currentPlayer;
 
